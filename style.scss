@@ -1,0 +1,144 @@
+// scss para bootstrap
+$black05:rgba(0, 0, 0, 0.5);
+$black08:rgba(0, 0, 0, 0.8);
+$black: #000000;
+$white:#ffffff;
+$color-teste-bg:#333E61;
+*{
+    padding:0;
+    margin:0;
+}
+.container-fluid{
+    padding-right: 0;
+    padding-left: 0;
+}
+.header{
+    padding:10px;
+    .container{
+        @media screen and (max-width:768px) {
+            position: absolute;
+            background-color: $black08;
+            z-index: 1;
+            margin: 0;
+            padding: 0;
+            left: 0;
+            top: 0;
+        }
+        .navbar.sticky-top{
+            a.navbar-brand{
+                color: $white;
+            }
+        }
+        span{
+            i{
+                color: $white;
+            }
+        }
+        .navbar-nav{
+            li{
+                a{
+                    color:$white;
+                }
+            }
+        }
+        form .btn.btn-outline-pesquisa{
+            color: $white;
+            background-color: transparent;
+            background-image: none;
+            border-color: $white;
+            &:hover{
+                color: $black08;
+                background-color: $white;
+                background-image: none;
+                border-color: $black08;
+            }
+        }
+    }
+}
+.banner{
+    position: relative;
+    top: -76px;
+    .dev2-banner{
+        position: relative;
+        background: url("image/bg.png") ;
+        .dev2-banner-overlay{
+            background-color: $black05;
+            position: absolute;
+            height: 450px;
+            width: 100%;
+            @media screen and (max-width:768px){
+                height: 340px;
+            }
+        }
+        .carousel{
+            .carousel-inner{
+                .carousel-item{
+                    text-align: center;
+                    height: 250px;
+                    @media screen and (max-width: 768px) {
+                        height: 140px;
+                    }
+                    h1{
+                        margin: 200px auto;
+                        color: $white;
+                        @media screen and (max-width:768px){
+                            font-size: 30px;
+                        }
+                    }
+                }
+            }
+            .carousel-control-prev, .carousel-control-next{
+                @media screen and (max-width:768px){
+                    top:100px;
+                }
+            }
+        }
+    }
+}
+.section{
+    position: relative;
+    .container{
+        .title{
+            border-bottom: 2px solid $black;
+            display: block;
+        }
+        .row{
+            .card{
+                border:none;
+                .card-body{
+                    background-color: transparent !important;
+                    position: relative;
+                    padding: 0 1.25rem;
+                    top: -25px;
+                    border: none;
+                    .card-title{
+                        text-shadow: 0px 0px 5px $black;
+                    }
+                    a{
+                        color: $white;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+    &#contato{
+        background: url("image/teste-bg.png") no-repeat $color-teste-bg;
+        padding: 25px 0;
+    }
+    &#sobre{
+        top:-76px;
+        background: url("image/teste-bg2.png") bottom no-repeat $color-teste-bg;
+        padding: 60px 0 90px;
+        color: $white;
+        .title{
+            border-bottom: 2px solid $white;
+            display: block;
+        }
+    }
+}
+.clearfix{
+    display: block;
+    padding-top:25px;
+}
+            
